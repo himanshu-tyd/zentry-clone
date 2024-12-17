@@ -28,10 +28,10 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    if (loadingVideos == totalVideo - 1) {
+    if (loadingVideos === totalVideo - 1) {
       setIsLoading(false);
     }
-  }, []);
+  }, [loadingVideos]);
 
   useGSAP(
     () => {
@@ -119,12 +119,13 @@ const Hero = () => {
             src={getVideoSrc(currentIndex)}
             loop // repeiting video again and again
             id="next-video"
+            onLoadedData={hanleVideoLoad}
             className="absolute-center invisible absolute z-20 size-64 object-cover object-center "
           />
 
           <video
             src={getVideoSrc(currentIndex == totalVideo - 1 ? 1 : currentIndex)}
-            autoPlay
+            // autoPlay
             loop
             muted
             className="absolute left-0 top-0 size-full object-cover object-center"
