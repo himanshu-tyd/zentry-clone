@@ -1,13 +1,16 @@
-import React, { useReducer, useRef } from "react";
+import  {  useRef } from "react";
 import AnimatedTitle from "./AnimateTitle";
 import gsap from "gsap";
 import RoundedCorner from "./RoundedCorner";
 import Button from "./Button";
+import {MouseEvent as ReactMouseEvent} from 'react'
+
+
 
 const Story = () => {
   const frameRef = useRef<HTMLImageElement | null>(null);
 
-  const handleMouseLeave = (e: MouseEvent) => {
+  const handleMouseLeave = () => {
     const element = frameRef.current;
 
     if (!element) return;
@@ -20,9 +23,8 @@ const Story = () => {
     });
   };
 
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = (e: ReactMouseEvent) => {
     const element = frameRef.current;
-
     if (!element) return;
     const { clientX, clientY } = e;
 
@@ -45,6 +47,7 @@ const Story = () => {
       ease: "power1.inOut",
     });
   };
+
 
   const handleMouseUp = () => {};
 

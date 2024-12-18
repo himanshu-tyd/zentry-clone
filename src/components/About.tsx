@@ -33,6 +33,7 @@ const About = () => {
         </p>
 
         <AnimateTitle
+          sectionId="about"
           title={`Disc<b>o</b>ver the world's <br /> largest shared <b>a</b>dventure`}
           containerClass={`mt-5 text-center !text-black animate-title  `}
         />

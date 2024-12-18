@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
 import clsx from "clsx";
@@ -75,7 +75,7 @@ const NavBar = () => {
           </div>
           <div className="flex h-full items-center">
             <div className="hidden md:block ">
-              {navItems.map((item, i) => (
+              {navItems.map((item) => (
                 <a
                   key={item.toLowerCase()}
                   className="nav-hover-btn"

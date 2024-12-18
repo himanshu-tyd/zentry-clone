@@ -42,7 +42,7 @@ const BentoTilt = ({ children, className = "" }: bentoTiltProps) => {
     setTransformStyle(newTransform);
   };
 
-  const handleMouseLeave = (e: MouseEvent) => {
+  const handleMouseLeave = () => {
     setTransformStyle("");
   };
 
