@@ -64,10 +64,6 @@ Contributions are welcome! Here’s how you can help:
 
 1. Fork the repository 🍴
 
-    ```
-    git clone https://github.com/himanshu-tyd/zentry-clone
-    ```
-
 2. Create a new branch for your feature or bug fix 🌱
    ```bash
    git checkout -b feature-name
